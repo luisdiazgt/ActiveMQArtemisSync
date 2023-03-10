@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "c9a95cc6-207b-41e6-89e2-75fbbd35d572",
+		"name": "ActiveMQSync",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Text",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"Hola mundo ActiveMQ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/activemq/text",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"activemq",
+						"text"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Entity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mensaje\": \"Hola mundo ActiveMQ con entidad\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/activemq/entity",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"activemq",
+						"entity"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
