@@ -40,7 +40,7 @@ public class SenderService {
         });
 
         // Leer Respuesta en cola
-        // jmsTemplate.setTimeToLive(1000);
+        jmsTemplate.setReceiveTimeout(10000); //Tiempo de espera máximo del mensaje 10 segundos
         String respuesta = (String)jmsTemplate.receiveSelectedAndConvert(jmsColaTestRespuesta,JMSCORR+uuid+"'");
         // String respuesta = (String)jmsTemplate.receiveSelectedAndConvert(jmsColaTest,JMSCORR+uuid+"'");
         log.info(MessageFormat.format("Cliente - mensaje leido. Mensaje: {0}. ID: {1}", respuesta,uuid));
